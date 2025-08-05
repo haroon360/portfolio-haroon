@@ -11,6 +11,50 @@ html {
 
 /* CSS Custom Properties (Variables) */
 :root {
-  --main-white: #fffffe;
-  /* Reference property with var() function: var(--main-white); */
+  --main-blue1: #BBE1FA; /* Reference property with var() function: var(--main-light-blue); */
+  --main-blue2: #3282B8;
+  --main-blue3: #0F4C75;
+  --main-blue4: #1B262C;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  font-size: 1rem;
+  /* color: var(--main-blue1);
+  background-color: var(--main-blue4); */
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+  display: block;
+}
+
+.nav-bar {
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  width: 100%;
+  /* z-index: 1; */
+
+  padding-right: 1rem;
+  /* background-color: ;
+  box-shadow: ; */
+
+}
+
+.nav-list {
+  border: 1px solid black;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-list a {
+  text-decoration: none;
 }
