@@ -23,7 +23,7 @@ body {
   font-weight: normal;
   font-size: 1rem;
   /* color: var(--main-blue1); */
-  background-color: var(--main-blue4);
+  /* background-color: var(--main-blue4); */
 }
 
 /* --------------- Nav Bar --------------- */
@@ -44,7 +44,7 @@ body {
 
 .nav-bar {
   /* border: 1px solid red; */
-  border-radius: 10px;
+  /* border-radius: 10px; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -89,13 +89,13 @@ header {
 }
 
 main {
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
   margin-top: 6.25rem;
 }
 
 /* --------------- Home Section --------------- */
 .cartoon-img {
-  max-width: 50vh;
+  max-width: 30vw;
   height: auto;
   border-radius: 10px;
   /* border:#3282B8 3px solid; */
@@ -129,10 +129,10 @@ main {
 
 /* --------------- About Me Section --------------- */
 .linkedin-image {
-  max-width: 45vh;
+  max-width: 30vw;
   height: auto;
   display: block;
-  border-radius: 170px;
+  border-radius: 2000px;
   border:#3282B8 3px solid;
 }
 
@@ -175,25 +175,42 @@ main {
 
 /* --------------- Projects Section --------------- */
 .projects-section {
-  background-color: var(--main-grey);
+  border: 5px solid black;
   width: 100vw;
   height: calc(100vh - 6.25rem);
 
   display: flex;
   align-items: center;
   justify-content: center;
-  /* gap: 0rem; */
+  /* gap: 1rem; */
 
   scroll-margin-top: 6.25rem;
 }
 
 .comingsoon-img {
-  max-width: 25vw;
+  max-width: 20vw;
   height: auto;
   border-radius: 5px;
   /* display: block; */
   /* border: 1px solid red; */
 }
-/* Fix all images max-width to VW NOT VH 
-align logos and h3 to h2 align center
-*/
+
+article {
+  border: 1px solid red;
+  background-color: #BBE1FA;
+  border-radius: 10px;
+
+  height: 70vh;
+  width: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  padding: 0 1rem;
+}
+
+.top-card, .bottom-card {
+  text-align: center;
+}
