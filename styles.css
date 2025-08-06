@@ -134,6 +134,7 @@ main {
   display: block;
   border-radius: 2000px;
   border:#3282B8 3px solid;
+  /* filter: grayscale(1); */
 }
 
 .aboutme-section {
@@ -175,24 +176,25 @@ main {
 
 /* --------------- Projects Section --------------- */
 .projects-section {
-  border: 5px solid black;
+  border: 3px solid black;
   width: 100vw;
   height: calc(100vh - 6.25rem);
 
   display: flex;
   align-items: center;
   justify-content: center;
-  /* gap: 1rem; */
-
+  gap: 1rem;
+  
   scroll-margin-top: 6.25rem;
+
+  padding: 0 .5rem;
 }
 
 .comingsoon-img {
   max-width: 20vw;
   height: auto;
   border-radius: 5px;
-  /* display: block; */
-  /* border: 1px solid red; */
+  border: 3px solid red;
 }
 
 article {
@@ -200,17 +202,57 @@ article {
   background-color: #BBE1FA;
   border-radius: 10px;
 
-  height: 70vh;
+  min-height: 80vh;
   width: auto;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-
+  justify-content: space-evenly;
   padding: 0 1rem;
 }
 
 .top-card, .bottom-card {
   text-align: center;
+}
+
+.top-card h2 {
+  font-weight: 600;
+  padding-bottom: 1rem;
+  /* font-size: ; */
+}
+
+.top-card a, .bottom-card {
+  font-size: 2rem;
+  color: black;
+}
+
+.top-card a:visited {
+  color: purple;
+}
+
+.top-card a:hover {
+  color: red;
+}
+
+.top-card a:active {
+  color: blue;
+} 
+
+/* --------------- Contact Section --------------- */
+
+
+
+
+
+
+/* --------------- Footer Section --------------- */
+footer {
+  text-align: right;
+  padding: 1rem;
+  font-weight: 300;
+  /* font-size: ; */
+  color: black;
+  background-color: burlywood;
+  border-top: 3px solid red;
 }
