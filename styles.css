@@ -15,6 +15,7 @@ html {
   --main-blue2: #3282B8;
   --main-blue3: #0F4C75;
   --main-blue4: #1B262C;
+  --main-grey: #E0E1DD;
 }
 
 body {
@@ -25,23 +26,24 @@ body {
   background-color: var(--main-blue4);
 }
 
+/* --------------- Nav Bar --------------- */
 .logo {
   height: 100px;
   width: auto;
   display: block;
   border-radius: 10px;
-  /* Background Highlight on Hover */
+  /* Background Highlight on Hover Effect*/
   transition: background-color 0.3s ease, padding 0.3s ease;
 }
 
 .logo:hover {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
-  padding: 4px;
+  padding: 5px;
 }
 
 .nav-bar {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
@@ -50,18 +52,17 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  height: 6.25rem; /*100px*/
+  height: 6.25rem; /* Equal to 100px */
   width: 100vw;
   z-index: 1;
 
   padding-right: 1rem;
   background-color: var(--main-blue3);
   /* box-shadow: ; */
-
 }
 
 .nav-list {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   list-style: none;
   display: flex;
   gap: 2rem;
@@ -74,14 +75,14 @@ body {
 }
 
 .nav-list a:hover {
-  /* color: ;
-  background-color: ; */
-  text-decoration: underline;
+  background-color: var(--main-blue4);
+  /* text-decoration: underline; */
 }
 
-/* .nav-list a:active {
-  color: ;
-} */
+.nav-list a:active {
+  color: white;
+}
+/* --------------- End Nav Bar --------------- */
 
 header {
   background-color: yellowgreen;
@@ -92,8 +93,18 @@ main {
   margin-top: 6.25rem;
 }
 
+/* --------------- Home Section --------------- */
+.cartoon-img {
+  max-width: 50vh;
+  height: auto;
+  border-radius: 10px;
+  /* border:#3282B8 3px solid; */
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
 .home-section {
-  background-color: grey;
+  background-color: var(--main-grey);
   width: 100vw;
   height: calc(100vh - 6.25rem);
 
@@ -101,28 +112,88 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* text-align: ; */
+  text-align: center;
   scroll-margin-top: 6.25rem;
-  
-}
-
-.cartoon-img {
-  max-width: 50vh;
-  height: auto;
-  border-radius: 200px;
-  margin-bottom: 1.5rem;
-  display: block;
 }
 
 .home-section h1 {
-  background-color: aliceblue;
   font-size: 3rem;
-  font-weight: 300;
+  font-weight: 600;
   margin-bottom: 1rem;
 }
 
 .home-section p {
-  background-color: #BBE1FA;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 500;
 }
 
+/* --------------- About Me Section --------------- */
+.linkedin-image {
+  max-width: 45vh;
+  height: auto;
+  display: block;
+  border-radius: 170px;
+  border:#3282B8 3px solid;
+}
+
+.aboutme-section {
+  background-color: tan;
+  width: 100vw;
+  height: calc(100vh - 6.25rem);
+
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  /* text-align: ; */
+  gap: 2rem;
+  /* padding: 0rem 5rem; */
+  scroll-margin-top: 6.25rem;
+}
+
+.aboutme-text {
+  border: 1px solid black;
+  /* padding: 0rem;
+  width: 100vw;
+  height: calc(100vh - 6.25rem); */
+
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+} 
+
+.aboutme-text h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.aboutme-text p {
+  font-size: 1.2rem;
+}
+
+/* --------------- Projects Section --------------- */
+.projects-section {
+  background-color: var(--main-grey);
+  width: 100vw;
+  height: calc(100vh - 6.25rem);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* gap: 0rem; */
+
+  scroll-margin-top: 6.25rem;
+}
+
+.comingsoon-img {
+  max-width: 25vw;
+  height: auto;
+  border-radius: 5px;
+  /* display: block; */
+  /* border: 1px solid red; */
+}
+/* Fix all images max-width to VW NOT VH 
+align logos and h3 to h2 align center
+*/
