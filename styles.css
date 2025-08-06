@@ -72,6 +72,9 @@ body {
   text-decoration: none;
   color: var(--main-blue1);
   font-size: 1.5rem;
+  border-radius: 10px;
+  padding: 0.5rem;
+  transition: background-color 0.3s ease;
 }
 
 .nav-list a:hover {
@@ -141,16 +144,18 @@ main {
   background-color: tan;
   width: 100vw;
   height: calc(100vh - 6.25rem);
+  scroll-margin-top: 6.25rem;
 
   display: flex;
   /* flex-direction: column; */
   align-items: center;
   justify-content: center;
+  /* align-content: space-around; add to children belwo to space para and pic and para space*/
   align-items: center;
   /* text-align: ; */
   gap: 2rem;
   /* padding: 0rem 5rem; */
-  scroll-margin-top: 6.25rem;
+  
 }
 
 .aboutme-text {
@@ -176,16 +181,15 @@ main {
 
 /* --------------- Projects Section --------------- */
 .projects-section {
-  border: 3px solid black;
+  border: 1px solid black;
   width: 100vw;
   height: calc(100vh - 6.25rem);
+  scroll-margin-top: 6.25rem;
 
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  
-  scroll-margin-top: 6.25rem;
 
   padding: 0 .5rem;
 }
@@ -240,11 +244,61 @@ article {
 } 
 
 /* --------------- Contact Section --------------- */
+.contact-section {
+  border: 3px solid green;
+  background-color: var(--main-grey);
 
+  width: 100vw;
+  height: calc(100vh - 6.25rem);
+  scroll-margin-top: 6.25rem;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  gap: 5rem;
+}
 
+.contact-section-header {
+  text-align: center;
+}
 
+.contact-section-header h2 {
+  font-weight: 500;
+  font-size: 4rem;
+}
 
+.contact-section-header p {
+  font-style: italic;
+  font-size: 1.5rem;
+}
+
+.contact-list {
+  background-color: aqua;
+  list-style: none;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 6rem;
+}
+
+.contact-list a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: whitesmoke;
+
+  display: block;
+  font-size: 2rem;
+  text-shadow: 2px 2px 1px blue;
+  transition: transform 0.3s ease-out;
+}
+
+.contact-list a:hover {
+  transform: translateY(8px);
+}
 
 /* --------------- Footer Section --------------- */
 footer {
@@ -252,7 +306,7 @@ footer {
   padding: 1rem;
   font-weight: 300;
   /* font-size: ; */
-  color: black;
-  background-color: burlywood;
-  border-top: 3px solid red;
+  color: var(--main-blue1);
+  background-color: var(--main-blue3);
+  border-top: 3px solid var(--main-blue1);
 }
