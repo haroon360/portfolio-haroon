@@ -26,7 +26,7 @@ body {
   background-color: var(--main-blue4); */
 }
 
-/* --------------- Nav Bar --------------- */
+/* --------------- Nav Bar Logo--------------- */
 .logo {
   max-height: 100px;
   width: auto;
@@ -42,6 +42,7 @@ body {
   border: 1px solid var(--main-grey);
 }
 
+/* --------------- Nav Bar --------------- */
 .nav-bar {
   /* border-radius: 10px; */
   display: flex;
@@ -86,10 +87,9 @@ body {
 }
 /* --------------- End Nav Bar --------------- */
 
-header {
-  /* background-color: red; 
-  testing for bleeding */
-}
+/* header {
+  background-color: red; 
+}  */
 
 main {
   /* border: 10px solid black; */
@@ -162,11 +162,6 @@ main {
   padding: 2rem 4rem;
 } 
 
-.aboutme-text h2 {
-  text-align: center;
-  font-size: 2rem;
-}
-
 /* --------------- Projects Section --------------- */
 .projects-section {
   /* border: 1px solid red; */
@@ -180,9 +175,8 @@ main {
   /* justify-content: center; */
   gap: 1rem;
   padding: 1rem;
-
   /* overflow-y: auto; */
-  /* overflow-x: auto; */
+  /* overflow-x: auto; Causes project nav to aim lower*/
 }
 
 .comingsoon-img {
@@ -192,14 +186,15 @@ main {
   border: 1.5px solid var(--main-blue4);
 }
 
-article /*Project Cards*/{
+article { /*Project Cards*/
   border: 2px solid var(--main-blue4);
   background-color: #BBE1FA;
   border-radius: 10px;
 
   min-height: 75vh;
   width: auto;
-
+  /* overflow: auto; */
+  /*Note: Used flex again to center content inside project cards*/
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -308,4 +303,48 @@ footer {
   color: white;
   background-color: var(--main-blue3);
   border-top: 3px solid var(--main-grey);
+}
+
+/* --------------- Media Queries --------------- */
+
+/*For Tablets-Laptop Screen Sizes*/
+@media (max-width: 1023px) {
+
+
+.home-section h1 {
+  font-size: 2.5rem;
+}
+
+.home-section p {
+  font-size: 1.15rem;
+}
+
+  .aboutme-text {
+    font-size: 1.15rem;
+    padding: 1rem 2rem;
+  } 
+
+/*Changes proj card layout to column*/
+  .projects-section /*Project Cards*/{
+    display: flex;
+    flex-direction: column;
+  }
+
+  article /*Project Cards*/{
+  min-height: 75vh;
+  width: 50vw;
+  } 
+
+.comingsoon-img {
+  max-width: 45vw;
+  height: auto;
+  }
+}
+
+/*For Phone Screens*/
+@media (max-width: 450px) {
+.nav-bar {
+  flex-direction: column;
+}
+
 }
