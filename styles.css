@@ -288,9 +288,8 @@ article /*Project Cards*/{
   color: var(--main-grey);
 
   display: block; /*Inline elements do not support transform. Block elements behave more like a box vs. inline occupy as much width as their content.*/
-  /* text-shadow: 2px 2px 1px blue; */
   transition: transform 0.3s ease-out; 
-  /* TRANSITION - smoothly animates a change from one CSS state to another — instead of the change happening instantly. */
+  /* TRANSITION - smoothly animates a change from one CSS state to another — instead of the change happening instantly. The transition property tells the browser which properties to animate and how, but it only takes effect when a change happens. So it needs to be set on the element before the change (in the normal/default state).*/
   /* Ease-in starts slowly and accelerates, while ease-out begins quickly and decelerates */
 }
 
@@ -310,4 +309,3 @@ footer {
   background-color: var(--main-blue3);
   border-top: 3px solid var(--main-grey);
 }
-
