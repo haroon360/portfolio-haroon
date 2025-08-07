@@ -28,7 +28,7 @@ body {
 
 /* --------------- Nav Bar --------------- */
 .logo {
-  height: 100px;
+  max-height: 100px;
   width: auto;
   display: block;
   border-radius: 10px;
@@ -51,12 +51,13 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  height: 6.25rem; /* Equal to 100px */
+  min-height: 6.25rem; /* Equal to 100px */
   width: 100vw;
   z-index: 1;
 
   padding-right: 1rem;
   background-color: var(--main-blue3);
+  /* border-bottom: 5px solid var(--main-blue2); Height is now 5px (convert to rem 1st) more-update calc heights */
 }
 
 .nav-list {
@@ -71,8 +72,8 @@ body {
   font-size: 1.5rem;
   border-radius: 6px;
   padding: 0.5rem;
-  transition: background-color 0.3s ease;
   border: 1px solid var(--main-blue3);
+  transition: background-color 0.3s ease;
 }
 
 .nav-list a:hover {
@@ -99,7 +100,7 @@ main {
 .cartoon-img {
   max-width: 30vw;
   height: auto;
-  border-radius: 300px;
+  border-radius: 50%;
   border: 3px solid black;
   margin-bottom: 1.5rem;
   display: block;
@@ -108,7 +109,7 @@ main {
 .home-section {
   background-color: var(--main-grey);
   width: 100vw;
-  height: calc(100vh - 6.25rem);
+  min-height: calc(100vh - 6.25rem);
   scroll-margin-top: 6.25rem;
   
   display: flex;
@@ -133,9 +134,9 @@ main {
 /* --------------- About Me Section --------------- */
 .linkedin-image {
   max-width: 28vw;
-  height: auto;
+  max-height: auto;
   /* display: block; */
-  border-radius: 2000px;
+  border-radius: 50%;
   /* border: 3px solid var(--main-blue2); */
   /* filter: grayscale(1); */
 }
@@ -144,13 +145,14 @@ main {
   background-color: var(--main-blue4);
   color: var(--main-grey);
   width: 100vw;
-  height: calc(100vh - 6.25rem);
+  min-height: calc(100vh - 6.25rem);
   scroll-margin-top: 6.25rem;
 
   display: flex;
   align-items: center;
   /* gap: 2rem; */
   padding: 0rem 2rem;
+  /* overflow-y: auto; messes with scroll margin top when active */
 }
 
 .aboutme-text {
@@ -167,33 +169,35 @@ main {
 
 /* --------------- Projects Section --------------- */
 .projects-section {
-  border: 1px solid red;
-  background-color: var(--main-blue4);
+  /* border: 1px solid red; */
+  background-color: var(--main-grey);
   width: 100vw;
-  height: calc(100vh - 6.25rem);
+  min-height: calc(100vh - 6.25rem);
   scroll-margin-top: 6.25rem;
 
   display: flex;
   align-items: center;
   /* justify-content: center; */
   gap: 1rem;
-
   padding: 1rem;
+
+  /* overflow-y: auto; */
+  /* overflow-x: auto; */
 }
 
 .comingsoon-img {
   max-width: 20vw;
   height: auto;
-  border-radius: 5px;
-  border: 3px solid red;
+  border-radius: 10px;
+  border: 1.5px solid var(--main-blue4);
 }
 
-article {
-  border: 1px solid red;
+article /*Project Cards*/{
+  border: 2px solid var(--main-blue4);
   background-color: #BBE1FA;
   border-radius: 10px;
 
-  min-height: 80vh;
+  min-height: 75vh;
   width: auto;
 
   display: flex;
@@ -203,7 +207,7 @@ article {
   padding: 0 1rem;
 }
 
-.top-card, .bottom-card {
+.top-card, .middle-card, .bottom-card {
   text-align: center;
 }
 
@@ -214,9 +218,14 @@ article {
 }
 
 .top-card a, .bottom-card {
-  font-size: 2rem;
-  color: black;
+  font-size: 4rem;
+  /* color: black; */
 }
+
+/* .project4-card .bottom-card, .project4-card h2 {
+  color: red;
+} */
+
 
 .top-card a:visited {
   color: purple;
@@ -232,11 +241,12 @@ article {
 
 /* --------------- Contact Section --------------- */
 .contact-section {
-  border: 3px solid green;
-  background-color: var(--main-grey);
+  /* border: 3px solid green; */
+  background-color: var(--main-blue4);
+  color: var(--main-grey);
 
   width: 100vw;
-  height: calc(100vh - 6.25rem);
+  min-height: calc(100vh - 6.25rem);
   scroll-margin-top: 6.25rem;
 
   display: flex;
@@ -262,29 +272,32 @@ article {
 }
 
 .contact-list {
-  background-color: aqua;
+  /* background-color: aqua; */
   list-style: none;
 
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  gap: 6rem;
+  gap: 2rem;
 }
 
 .contact-list a {
   text-decoration: none;
-  font-size: 1.5rem;
-  color: whitesmoke;
-
-  display: block;
   font-size: 2rem;
-  text-shadow: 2px 2px 1px blue;
-  transition: transform 0.3s ease-out;
+  color: var(--main-grey);
+
+  display: block; /*Inline elements do not support transform. Block elements behave more like a box vs. inline occupy as much width as their content.*/
+  /* text-shadow: 2px 2px 1px blue; */
+  transition: transform 0.3s ease-out; 
+  /* TRANSITION - smoothly animates a change from one CSS state to another — instead of the change happening instantly. */
+  /* Ease-in starts slowly and accelerates, while ease-out begins quickly and decelerates */
 }
 
 .contact-list a:hover {
   transform: translateY(8px);
+  /* TRANSFORM - changes how an element looks/positioned */
+  /* color: red; Too bright/change*/
 }
 
 /* --------------- Footer Section --------------- */
@@ -293,8 +306,8 @@ footer {
   padding: 1rem;
   font-weight: 300;
   /* font-size: ; */
-  color: var(--main-blue1);
+  color: white;
   background-color: var(--main-blue3);
-  border-top: 3px solid var(--main-blue1);
+  border-top: 3px solid var(--main-grey);
 }
 
