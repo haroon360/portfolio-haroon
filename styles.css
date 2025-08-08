@@ -220,17 +220,20 @@ article { /*Project Cards*/
   color: red;
 } */
 
+.top-card a {
+  color: black;
+}
 
 .top-card a:visited {
   color: purple;
 }
 
 .top-card a:hover {
-  color: red;
+  color: blue;
 }
 
 .top-card a:active {
-  color: blue;
+  color: red;
 } 
 
 /* --------------- Contact Section --------------- */
@@ -404,10 +407,16 @@ footer {
 
   /* This has to look like a button/link that users can press */
   .top-card a{
-    border: 2px solid blue;
+    border: 2px solid black;
     border-radius: 10px;
     padding: .25rem .5rem;
   }
+
+  .top-card a:active {
+    color: blue;
+    background-color: black;
+  } 
+
 /* --- Contact Section --- */
   .contact-section-header h2 {
     font-weight: 400;
