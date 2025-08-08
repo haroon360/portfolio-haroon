@@ -290,6 +290,11 @@ article { /*Project Cards*/
   /* Ease-in starts slowly and accelerates, while ease-out begins quickly and decelerates */
 }
 
+.contact-list a:active {
+    background-color: blue;
+    border-radius: 10px;
+  }
+
 .contact-list a:hover {
   transform: translateY(8px);
   /* TRANSFORM - changes how an element looks/positioned */
@@ -447,9 +452,6 @@ footer {
     transform: none;
   }
 
-  .contact a:active {
-    background-color: var(--main-blue2);
-  }
 /* --- Footer Section --- */
   footer {
     text-align: right;
@@ -537,3 +539,4 @@ footer {
 
   /* CONTUNUE HERE */
 }
+
